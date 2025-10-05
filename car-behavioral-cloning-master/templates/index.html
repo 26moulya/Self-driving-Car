@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Faraado</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="../static/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="../static/images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="../static/css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,600,700|Poppins:400,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="../static/css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body onload="onPageLoad()">
+      <!--header section start -->
+      <div class="header_section">
+         <div class="container-fluid">
+            <div class="costum_header">
+               <div class="logo"><a href="/"><img src="../static/images/logo.png"></a></div>
+               <div class="menu_text">
+                  <div id="myNav" class="overlay">
+                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                     <div class="overlay-content">
+                        <a href="/">Home</a>
+                        <a id="login" style="display: none;" href="/login">Login</a>
+                        <a id="logout" style="display: none; color:white" onclick="Logout()">Logout</a>
+                     
+                        <a id="play" style="display: none;" href="/play">Play</a>
+                        <a href="/about">About</a>
+                        <a href="/game">Our Game</a>
+                        <a href="/blog">Blog</a>
+                        <a href="/contact">CONTACT US</a>
+                        <script>
+                           function Logout(){
+                              localStorage.setItem('Login',false)
+                              alert("logout successfull")
+                              window.location="login.html"
+                           }
+                           function onPagLeoad(){
+                              
+                              let isLogin = localStorage.getItem('Login')
+                              if(isLogin=="true"){
+                                 let login = document.getElementById('login')
+                                 let logout = document.getElementById('logout')
+                                 let play = document.getElementById('play')
+                                 login.style="display:none"
+                                 logout.style="display:block"
+                                 play.style="display:block"
+                              }
+                              else{
+                                 let login = document.getElementById('login')
+                                 let logout = document.getElementById('logout')
+                                 let play = document.getElementById('play')
+                                 login.style="display:block"
+                                 logout.style="display:none"
+                                 play.style="display:none"
+                              }
+                           }
+                        </script>
+                     </div>
+                  </div>
+                  <span  style="font-size:33px;cursor:pointer; color: #ffffff;" onclick="openNav()"><img src="../static/images/toggle-icon.png" class="toggle_menu"></span>
+               </div>
+            </div>
+         </div>
+         <!-- banner section start -->
+         <div class="banner_section layout_padding">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+               <ol class="carousel-indicators">
+                  <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+               </ol>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="banner_taital">
+                           <h1 class="banner_taital">AI Drift Master</h1>
+                           <p class="banner_text">Master the art of controlled drifting with AI-driven cars in this thrilling challenge.</p>
+                        </div>
+                        <div class="contact">
+                           <!-- <div class="contact_bt"><a href="#">Contact Us</a></div> -->
+                        </div>
+                        <div class="car_img"><img src="../static/images/car-img.png"></div>
+                     </div>
+                     <div class="container-fluid">
+                        <h4 class="number_text active">01 <span style="text-align: right; float: right;">02</span></h4>
+                     </div>
+                  </div>
+                  <!-- <div class="carousel-item">
+                     <div class="container">
+                        <div class="banner_taital">
+                           <h1 class="banner_taital">Speed Car Game</h1>
+                           <p class="banner_text">It is a long established fact that a reader will be distracted by the readable</p>
+                        </div>
+                        <div class="contact">
+                           <div class="contact_bt"><a href="#">Contact Us</a></div>
+                        </div>
+                        <div class="car_img"><img src="../static/images/car-img.png"></div>
+                     </div>
+                     <div class="container-fluid">
+                        <h4 class="number_text">01 <span class="number_text_2 active">02</span></h4>
+                     </div>
+                  </div> -->
+                  <!-- <div class="carousel-item">
+                     <div class="container">
+                        <div class="banner_taital">
+                           <h1 class="banner_taital">Speed Car Game</h1>
+                           <p class="banner_text">It is a long established fact that a reader will be distracted by the readable</p>
+                        </div>
+                        <div class="contact">
+                           <div class="contact_bt"><a href="#">Contact Us</a></div>
+                        </div>
+                        <div class="car_img"><img src="../static/images/car-img.png"></div>
+                     </div>
+                     <div class="container-fluid">
+                        <h4 class="number_text active">10 <span style="text-align: right; float: right;">02</span></h4>
+                     </div>
+                  </div> -->
+               </div>
+            </div>
+         </div>
+         <!-- banner section end -->
+      </div>
+      <!-- header section end -->
+      <!-- about section start -->
+      <!-- <div class="about_section layout_padding">
+         <div class="container">
+            <div class="about_box">
+               <h1 class="about_taital">About Game</h1>
+               <p class="about_text">t is a long established fact that a reader will be distracted by the readable content of a page when looking </p>
+               <div class="about_bt"><a href="#">Read More</a></div>
+            </div>
+            <div class="about_img"><img src="../static/images/about-img.png"></div>
+         </div>
+      </div> -->
+      <!-- about section end -->
+      <!-- game section star -->
+      <!-- <div class="game_section layout_padding">
+         <div class="container">
+            <h1 class="game_taital">How To Play This Game</h1>
+            <div class="game_box_main">
+               <div class="game_section_2">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <h4 class="login_text">Login Now</h4>
+                        <input type="" class="input_text" placeholder="User Name" name="User Name">
+                        <input type="" class="input_text" placeholder="Email" name="Email">
+                        <input type="" class="input_text" placeholder="Password" name="Password">
+                        <div class="login_bt"><a href="#">Login</a></div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="login_taital_text">
+                           <h3 class="point_taital">01</h3>
+                           <p class="point_text">There are many variations of passages of Lorem Ipsum available, but the majority </p>
+                        </div>
+                        <div class="login_taital_text">
+                           <h3 class="point_taital">02</h3>
+                           <p class="point_text">There are many variations of passages of Lorem Ipsum available, but the majority </p>
+                        </div>
+                        <div class="login_taital_text">
+                           <h3 class="point_taital">03</h3>
+                           <p class="point_text">There are many variations of passages of Lorem Ipsum available, but the majority </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> -->
+      <!-- game section end -->
+      <!-- blog section start -->
+         <!-- <div class="blog_section layout_padding">
+            <div class="container">
+               <h1 class="blog_taital">You Can Earn money From Car Spped Game</h1>
+               <p class="blog_text">There are many variations of passages of Lorem Ipsum available, but the majority There are many variations of passages of Lorem Ipsum available, but the majority </p>
+               <div class="bog_img"><img src="../static/images/blog-img.png"></div>
+               <div class="btn_main">
+                  <ul>
+                     <li><a href="#">Play Now</a></li>
+                     <li class="active"><a href="#">Get Coins</a></li>
+                     <li><a href="#">Exchange</a></li>
+                  </ul>
+               </div>
+               <div class="blog_section_2">
+                  <div class="row">
+                     <div class="col-sm-7">
+                        <h2 class="download_text">Download From</h2>
+                        <p class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority There are many variations of passages of Lorem Ipsum available, but the majority </p>
+                        <div class="app_main">
+                           <div class="google_app"><img src="../static/images/google-app-icon.png"></div>
+                           <div class="app_store"><img src="../static/images/app-store-icon.png"></div>
+                        </div>
+                     </div>
+                     <div class="col-sm-5">
+                        <div class="bog_img"><img src="../static/images/blog-img1.png"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> -->
+      <!-- blog section end -->
+      <!-- contact section start -->
+      <!-- <div class="contact_section layout_padding">
+         <div class="container">
+            <h1 class="contact_taital">Contact Us</h1>
+            <div class="contact_menu">
+               <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="game.html">Our Game</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+               </ul>
+            </div>
+            <div class="newsletter_main">
+               <h3 class="newsletter_text">Newsletter</h3>
+               <input type="text" class="email_text" placeholder="Enter your email" name="Enter your email">
+               <div class="sing_up_bt"><a href="#">Sign Up</a></div>
+            </div>
+         </div>
+      </div> -->
+      <!-- contact section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">ENJOY THE GAME </p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="../static/js/jquery.min.js"></script>
+      <script src="../static/js/popper.min.js"></script>
+      <script src="../static/js/bootstrap.bundle.min.js"></script>
+      <script src="../static/js/jquery-3.0.0.min.js"></script>
+      <script src="../static/js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="../static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="../static/js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="../static/js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+         $(document).ready(function(){
+         $(".fancybox").fancybox({
+            openEffect: "none",
+            closeEffect: "none"
+            });
+            
+            $(".zoom").hover(function(){
+            
+            $(this).addClass('transition');
+            }, function(){
+            
+            $(this).removeClass('transition');
+            });
+            });
+            
+      </script> 
+      <script>
+         function openNav() {
+         document.getElementById("myNav").style.width = "100%";
+         }
+         
+         function closeNav() {
+         document.getElementById("myNav").style.width = "0%";
+         }
+      </script>   
+   </body>
+</html>

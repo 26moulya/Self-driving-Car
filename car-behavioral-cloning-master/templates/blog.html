@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Game</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="../static/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="../static/images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="../static/css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,600,700|Poppins:400,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="../static/css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body onload="onPageLoad()">
+      <!--header section start -->
+      <div class="header_section">
+         <div class="container-fluid">
+            <div class="costum_header">
+               <div class="logo"><a href="/"><img src="../static/images/logo.png"></a></div>
+               <div class="menu_text">
+                  <div id="myNav" class="overlay">
+                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                     <div class="overlay-content">
+                        <a href="/">Home</a>
+                        <a id="login" style="display: none;" href="/login">Login</a>
+                        <a id="logout" style="display: none; color:white" onclick="Logout()">Logout</a>
+                     
+                        <a id="play" style="display: none;" href="/play">Play</a>
+                        <a href="/about">About</a>
+                        <a href="/game">Our Game</a>
+                        <a href="/blog">Blog</a>
+                        <a href="/contact">CONTACT US</a>
+                        <script>
+                           function Logout(){
+                              localStorage.setItem('Login',false)
+                              alert("logout successfull")
+                              window.location="login.html"
+                           }
+                           function onPageLoad(){
+                              
+                              let isLogin = localStorage.getItem('Login')
+                              if(isLogin=="true"){
+                                 let login = document.getElementById('login')
+                                 let logout = document.getElementById('logout')
+                                 let play = document.getElementById('play')
+                                 login.style="display:none"
+                                 logout.style="display:block"
+                                 play.style="display:block"
+                              }
+                              else{
+                                 let login = document.getElementById('login')
+                                 let logout = document.getElementById('logout')
+                                 let play = document.getElementById('play')
+                                 login.style="display:block"
+                                 logout.style="display:none"
+                                 play.style="display:none"
+                              }
+                           }
+                        </script>
+                     </div>
+                  </div>
+                  <span  style="font-size:33px;cursor:pointer; color: #ffffff;" onclick="openNav()"><img src="../static/images/toggle-icon.png" class="toggle_menu"></span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- header section end -->
+      <!-- blog section start -->
+      <div class="blog_section layout_padding">
+         <div class="container">
+            <h1 class="blog_taital">You Can Earn money From Car Spped Game</h1>
+            <p class="blog_text">There are many variations of passages of Lorem Ipsum available, but the majority There are many variations of passages of Lorem Ipsum available, but the majority </p>
+            <div class="bog_img"><img src="../static/images/blog-img.png"></div>
+            <div class="btn_main">
+               <ul>
+                  <li><a href="#">Play Now</a></li>
+                  <li class="active"><a href="#">Get Coins</a></li>
+                  <li><a href="#">Exchange</a></li>
+               </ul>
+            </div>
+            <div class="blog_section_2">
+               <div class="row">
+                  <div class="col-sm-7">
+                     <h2 class="download_text">Download From</h2>
+                     <p class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority There are many variations of passages of Lorem Ipsum available, but the majority </p>
+                     <div class="app_main">
+                        <div class="google_app"><img src="../static/images/google-app-icon.png"></div>
+                        <div class="app_store"><img src="../static/images/app-store-icon.png"></div>
+                     </div>
+                  </div>
+                  <div class="col-sm-5">
+                     <div class="bog_img"><img src="../static/images/blog-img1.png"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- blog section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Copyright 2020 All Rights Reserved. Design by<a href="https://html.design"> Free  html Templates</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="../static/js/jquery.min.js"></script>
+      <script src="../static/js/popper.min.js"></script>
+      <script src="../static/js/bootstrap.bundle.min.js"></script>
+      <script src="../static/js/jquery-3.0.0.min.js"></script>
+      <script src="../static/js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="../static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="../static/js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="../static/js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+         $(document).ready(function(){
+         $(".fancybox").fancybox({
+            openEffect: "none",
+            closeEffect: "none"
+            });
+            
+            $(".zoom").hover(function(){
+            
+            $(this).addClass('transition');
+            }, function(){
+            
+            $(this).removeClass('transition');
+            });
+            });
+            
+      </script> 
+      <script>
+         function openNav() {
+         document.getElementById("myNav").style.width = "100%";
+         }
+         
+         function closeNav() {
+         document.getElementById("myNav").style.width = "0%";
+         }
+      </script>   
+   </body>
+</html>
